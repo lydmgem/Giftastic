@@ -1,3 +1,21 @@
-.form-div {
-   float: right;
+body {
+   font-size: 20px;
 }
+
+.gif-form {
+   float: right;
+   padding-right: 60px;
+}
+
+.gif {
+   font-size: 12px;
+   border-radius: 30px;
+   background: lavender;
+   padding: 10px;
+   margin-right: 10px;
+   margin-bottom: 5px;
+}
+
+#gif-results {
+   column-count: 2;
+ }

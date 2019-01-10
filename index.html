@@ -9,23 +9,22 @@
     </head>
     <body>
         <div class="container">
-            <h1>GIF Search</h1>
             <!-- Buttons will get dumped here -->
             <div id="buttons-view"></div>
             
-            <div class="form-div">
-            <form id="gif-form">
-                <label for="topic-input">Add a topic:</label>
-                <input type="text" id="topic-input">
+            <div class="gif-form">
+            <form>
+                <label>Add a topic:</label><BR>
+                <input id="topic-input" type="text">
                 
                 <!-- Search button triggers new topic to be added -->
-                <input id="add-topic" type="submit" value="Submit">
+                <button id="add-topic" type="submit">Submit</button>
             </form>
             </div>
             
-            
-            
-            
+            <!-- GIF results will populate here -->
+            <div id="gif-results"></div>
+              
         </div>
         <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
