@@ -11,6 +11,12 @@ p {
    padding-right: 60px;
 }
 
+#add-topic {
+   font-size: 14px;
+   background: grey;
+   color: white;
+}
+
 .gif {
    font-size: 15px;
    border-radius: 30px;
