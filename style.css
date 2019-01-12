@@ -2,20 +2,35 @@ body {
    font-size: 20px;
 }
 
+p {
+   margin: 20px;
+}
+
 .gif-form {
    float: right;
    padding-right: 60px;
 }
 
 .gif {
-   font-size: 12px;
+   font-size: 15px;
    border-radius: 30px;
-   background: lavender;
+   background: lightseagreen;
+   color: white;
    padding: 10px;
    margin-right: 10px;
    margin-bottom: 5px;
 }
 
+.results-container {
+   margin-top: 30px;
+}
+
 #gif-results {
-   column-count: 2;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+
+ .result {
+    margin: 20px;
  }

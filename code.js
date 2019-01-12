@@ -1,9 +1,11 @@
-// Before you can make any part of our site work, you need to create an array of strings, each one related to a topic that interests you. Save it to a variable called topics.
+// Create an array of strings, each one related to a topic that interests you. Save it to a variable called topics.
 var topics = [
-    "The Beatles",
-    "3rd Rock from the Sun",
     "Pandas",
-    "Birdbox"
+    "Funny",
+    "3rd Rock from the Sun",
+    "The Good Doctor",
+    "Friends",
+    "Comedy"
 ];
 
 // Function for displaying GIF data
@@ -40,16 +42,17 @@ $(document).on("click", ".gif", function() {
             for (var r = 0; r < results.length; r++) {
                 var resultDiv = $("<div id='result-container'>");
                 // Grabbing the rating from the response data in order for us to display it on the page
-                var rating = results[r].rating;
+                var rating = results[r].rating.toUpperCase();
                 var p = $("<p>").text("Rating: " + rating);
 
-                //
+                // This is where we will grab the image attributes from the response for our GIFS
                 var gifImg = $("<img class='result'>");
                 gifImg.attr("src", results[r].images.fixed_height_still.url);
                 gifImg.attr("data-state", "still");
                 gifImg.attr("data-still", results[r].images.fixed_height_still.url);
                 gifImg.attr("data-animate", results[r].images.fixed_height.url);
     
+                // We prepend each results of the button that the user chooses
                 resultDiv.prepend(gifImg);
                 resultDiv.prepend(p);
     
@@ -70,7 +73,6 @@ $(document).on("click", ".gif", function() {
             $(this).attr("data-state", "still");
         }});
 
-// Only once you get images displaying with button presses should you move on to the next step.
 // Add a form to your page takes the value from a user input box and adds it into your topics array. Then make a function call that takes each topic in the array remakes the buttons on the page.
         $("#add-topic").on("click", function(event) {
             event.preventDefault();
@@ -92,6 +94,6 @@ $(document).on("click", ".gif", function() {
             }
 	            $("#topic-input").val("");
         });
-        // To display the initial list of movies, we have to call the renderButtons function
+        // To display the initial list of topics, we have to call the renderButtons function
             renderButtons();
         
