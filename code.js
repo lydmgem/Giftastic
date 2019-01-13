@@ -30,7 +30,7 @@ $(document).on("click", ".gif", function() {
     var clickedOn = $(this).attr("gif-name");
     // This will be the queryURL in order for the AJAX function to work
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + clickedOn +
-    "&api_key=ExIo4rUIvNcw8XkTsjNDpVeEUqJ0LeNU&limit=10";
+    "&api_key=ExIo4rUIvNcw8XkTsjNDpVeEUqJ0LeNU&limit=10&rating=g&rating=pg-13";
     
     $.ajax({
             url: queryURL,
